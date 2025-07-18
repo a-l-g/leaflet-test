@@ -31,6 +31,7 @@
     	addMarkerFromLatLon("01.07676, 55.04764"); 
 	addMarkerFromLatLon("01.67267, 53.46546"); 
 	addMarkerFromLatLon("01.6363 54.67376");
+	addMarkerFromLatLon("01.23426 54.67376");
 
 
 	
