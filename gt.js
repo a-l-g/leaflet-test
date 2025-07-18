@@ -16,14 +16,11 @@
 	
 
 	// Function to geocode postcode and add marker
-    async function addMarkerFromPostcode(postcode) {
+    async function addMarkerFromLatLon(latt, longt) {
       try {
-        const response = await fetch(`https://geocode.xyz/${postcode}?json=1`);
-        const data = await response.json();
-
-        if (data && data.latt && data.longt) {
-          const latitude = parseFloat(data.latt);
-          const longitude = parseFloat(data.longt);
+     
+          const latitude = parseFloat(latt);
+          const longitude = parseFloat(longt;
 
           // Add marker to the map
           var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
@@ -31,18 +28,13 @@
 
           // Optionally, center the map on the marker
           map.setView([latitude, longitude], 13);
-        } else {
-          console.error("Invalid postcode or geocoding error");
-        }
-      } catch (error) {
-        console.error("Error fetching geocoding data:", error);
-      }
+
     }
 
     // Example usage:
-    	addMarkerFromPostcode("SW1H 0NB"); // Replace with your desired postcode
-	addMarkerFromPostcode("PE2 8YY"); // Replace with your desired postcode
-	addMarkerFromPostcode("B2 4BJ"); // Replace with your desired postcode
+    	addMarkerFromLatLon("01.07676, 55.04764"); 
+	addMarkerFromLatLon("01.67267, 53.46546"); 
+	addMarkerFromLatLon("01.6363 54.67376");
 
 
 	
