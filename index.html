@@ -8,9 +8,10 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
   </head>
-  <body>
+ 
+	<body>
     <div id="map" style="width: 100%; height: 100%;"></div>
-<script>
+	<script>
 
 	const map = L.map('map').setView([51.505, -0.09], 13);
 
@@ -19,19 +20,15 @@
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 	
-	const LeafIcon = L.Icon.extend({
+	const gtIcon = L.Icon.extend({
 		options: {
 			iconSize:     [50, 60],
 			popupAnchor:  [-3, -76]
 		}
 	});
 
-	const pIcon = new LeafIcon({iconUrl: 'shield.png'});
-	const wIcon = new LeafIcon({iconUrl: 'shield.png'});
+	const pIcon = new gtIcon({iconUrl: 'shield.png'});
 	
-
-	const mGreen = L.marker([51.5, -0.09], {icon: pIcon}).bindPopup('I am a teapot.').addTo(map);
-	const mRed = L.marker([51.495, -0.083], {icon: wIcon}).bindPopup('I am not a teapot.').addTo(map);
 
 	// Function to geocode postcode and add marker
     async function addMarkerFromPostcode(postcode) {
@@ -44,7 +41,7 @@
           const longitude = parseFloat(data.longt);
 
           // Add marker to the map
-          var marker = L.marker([latitude, longitude]).addTo(map);
+          var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
           marker.bindPopup(`Postcode: ${postcode}<br>Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
 
           // Optionally, center the map on the marker
