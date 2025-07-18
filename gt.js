@@ -15,23 +15,16 @@
 	const pIcon = new gtIcon({iconUrl: 'shield.png'});
 	
 
-	// Function to geocode postcode and add marker
-    async function addMarkerFromLatLon(latitude, longitude) {
-
+	var latitude = 1.23909230
+	var longitude = 55.578578
           // Add marker to the map
-          var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
-          marker.bindPopup(`Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
+        var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
+        marker.bindPopup(`Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
 
-          // Optionally, center the map on the marker
-          map.setView([latitude, longitude], 13);
+        // Optionally, center the map on the marker
+        map.setView([latitude, longitude], 8);
 
-    }
 
-    // Example usage:
-    	addMarkerFromLatLon("01.07676, 55.04764"); 
-	addMarkerFromLatLon("01.67267, 53.46546"); 
-	addMarkerFromLatLon("01.6363 54.67376");
-	addMarkerFromLatLon("01.23426 54.67376");
 
 
 	
