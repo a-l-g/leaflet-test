@@ -20,7 +20,7 @@
 
           // Add marker to the map
           var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
-          marker.bindPopup(`Postcode: ${postcode}<br>Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
+          marker.bindPopup(`Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
 
           // Optionally, center the map on the marker
           map.setView([latitude, longitude], 13);
