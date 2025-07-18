@@ -16,11 +16,7 @@
 	
 
 	// Function to geocode postcode and add marker
-    async function addMarkerFromLatLon(latt, longt) {
-      try {
-     
-          const latitude = parseFloat(latt);
-          const longitude = parseFloat(longt;
+    async function addMarkerFromLatLon(latitude, longitude) {
 
           // Add marker to the map
           var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
