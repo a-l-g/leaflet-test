@@ -14,18 +14,19 @@
 
 	const pIcon = new gtIcon({iconUrl: 'shield.png'});
 	
+	function addMarker(latitude, longitude)
+		{
+			
+          		// Add marker to the map
+       			 var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
+       			 marker.bindPopup(`Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
 
-	var latitude = 1.23909230
-	var longitude = 55.578578
-          // Add marker to the map
-        var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
-        marker.bindPopup(`Latitude: ${latitude}<br>Longitude: ${longitude}`).openPopup();
-
-        // Optionally, center the map on the marker
-        map.setView([latitude, longitude], 8);
+        
+       			 map.setView([latitude, longitude], 8);
+		}
 
 
-
+	addMarker(55.578578, -0.065343)
 
 	
 
