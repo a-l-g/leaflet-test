@@ -14,8 +14,7 @@
 
 	const pIcon = new gtIcon({iconUrl: 'shield.png'});
 	
-	function addMarker(latitude, longitude)
-		{
+	function addLocation(latitude, longitude){
 			
           		// Add marker to the map
        			 var marker = L.marker([latitude, longitude],{icon: pIcon}).addTo(map);
@@ -26,8 +25,8 @@
 		}
 
 
-	addMarker(55.578578, -0.065343);
-	addMarker(52.578578, -0.065343);
+	addLocation(55.578578, -0.065343);
+	addLocation(52.578578, -0.065343);
 
 	
 
