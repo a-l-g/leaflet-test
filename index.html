@@ -21,7 +21,6 @@
 	
 	const LeafIcon = L.Icon.extend({
 		options: {
-			shadowUrl: 'leaf-shadow.png',
 			iconSize:     [38, 95],
 			shadowSize:   [50, 64],
 			iconAnchor:   [22, 94],
@@ -30,13 +29,13 @@
 		}
 	});
 
-	const greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'});
-	const redIcon = new LeafIcon({iconUrl: 'leaf-red.png'});
-	const orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
+	const pIcon = new LeafIcon({iconUrl: 'shield.png'});
+	const wIcon = new LeafIcon({iconUrl: 'shield.png'});
+	
 
-	const mGreen = L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup('I am a green leaf.').addTo(map);
-	const mRed = L.marker([51.495, -0.083], {icon: redIcon}).bindPopup('I am a red leaf.').addTo(map);
-	const mOrange = L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup('I am an orange leaf.').addTo(map);
+	const mGreen = L.marker([51.5, -0.09], {icon: pIcon}).bindPopup('I am a teapot.').addTo(map);
+	const mRed = L.marker([51.495, -0.083], {icon: wIcon}).bindPopup('I am not a teapot.').addTo(map);
+	;
 
 	
 
