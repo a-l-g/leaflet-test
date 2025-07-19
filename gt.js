@@ -8,7 +8,7 @@
 	const gtIcon = L.Icon.extend({
 		options: {
 			iconSize:     [50, 60],
-			popupAnchor:  [-3, -76]
+			popupAnchor:  [-3, -3]
 		}
 	});
 
